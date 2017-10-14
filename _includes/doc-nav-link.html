@@ -1,0 +1,6 @@
+<nav class="doc-nav">
+  <ul>
+    {% if include.prev %}<li class="prev">Prev. Chapter: <a href="{{ site.url }}{{include.prev.path}}">{{include.prev.num}}. {{include.prev.title}}</a></li>{% endif %}
+    {% if include.next %}<li class="next">Next Chapter: <a href="{{ site.url }}{{include.next.path}}">{{include.next.num}}. {{include.next.title}}</a></li>{% endif %}
+  </ul>
+</nav>

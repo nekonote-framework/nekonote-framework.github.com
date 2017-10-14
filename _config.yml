@@ -1,0 +1,80 @@
+# Site wide configuration
+title: Nekonote Framework
+summary: Simple and Lightweight Ruby Framework for Web Development
+description: Nekonote Framework is a small web application framework that helps your web development.
+locale: en
+url: https://nekonote-framework.github.io
+product: Nekonote Framework
+feed:
+  path: atom.xml
+
+# individual information
+spec:
+  latest:
+    version: 1.0.0-beta
+    path: /blog/2017/10/14/about.html
+  compliant_platform: Linux
+  compliant_ruby_version: 2.3
+  url:
+    github: https://github.com/khotta/Nekonote-Framework
+    rubygems: https://rubygems.org/gems/nekonote-framework
+    license: https://github.com/khotta/Nekonote-Framework/blob/master/LICENSE
+
+# Site owner
+owner:
+  name: Kazuya Hotta
+  web: https://github.com/khotta
+  email: khotta116@gmail.com
+  twitter:
+  google:
+    ad-client:
+    ad-slot:
+  bio: Founder, Developer
+  avatar: avatar/khotta.jpeg
+  disqus-shortname:
+
+# server
+# host: 0.0.0.0 # FIXME
+# port: 5000 # FIXME
+
+# Jekyll configuration
+sass:
+  sass_dir: _sass
+  style: compressed
+#permalink: /:category/:version/article/:page.html
+#permalink: /:categories/:title/
+kramdown:
+  toc_levels: 1..2
+highlighter: rouge
+gems:
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+
+# include and exclude
+include:
+  - .htaccess
+exclude:
+  - "*.less"
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - CHANGELOG
+  - Capfile
+  - Gemfile
+  - Gruntfile.js
+  - LICENSE
+  - README
+  - Rakefile
+  - config
+  - gulpfile.js
+  - lib
+  - log
+  - node_modules
+  - package.json
+  - spec
+  - tmp
+  - vendor

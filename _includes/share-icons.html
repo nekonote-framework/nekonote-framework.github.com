@@ -1,0 +1,14 @@
+{% capture doc_url %}{{site.url}}{% if page.url %}{{page.url}}.html{% endif %}{% endcapture %}
+{% capture entitiled %}{{ page.title | escape | append: ' - ' | append: site.title}}{% endcapture %}
+<div id="fb-root"></div>
+<div class="inline-btn">
+  <div><iframe src="http://ghbtns.com/github-btn.html?user=khotta&repo=Nekonote-Framework&type=watch&count=false" allowtransparency="true" frameborder="0" scrolling="0" width="52" height="20"></iframe></div>
+  <div><a href="https://twitter.com/share" class="twitter-share-button" data-url="{{doc_url}}" data-text="{{entitiled}}" data-hashtags="Nekonote Framework">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
+  <div><iframe src="https://www.facebook.com/plugins/share_button.php?href={{doc_url}}&layout=button&mobile_iframe=false&width=61&height=20&appId" width="61" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></div>
+  <div><script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script><script type="IN/Share" data-url="{{doc_url}}"></script></div>
+  <div><script src="https://apis.google.com/js/platform.js" async defer></script><div class="g-plusone" data-size="medium" data-annotation="none"></div></div>
+  <div>
+    <div class="line-it-button" data-lang="ja" data-type="share-a" data-url="{{doc_url}}" style="display: none;"></div>
+    <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+  </div>
+</div>

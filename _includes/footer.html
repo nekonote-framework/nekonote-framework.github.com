@@ -1,0 +1,36 @@
+<footer id="layout-footer">
+  <nav>
+    <ul>
+      <li class="header">Information</li>
+      <li><a class="footer-link" href="{{ site.owner.web }}" target="_blank">Contact Developer</a></li>
+      <li><a class="footer-link" href="{{ site.spec.url.license }}" target="_blank">License</a></li>
+      <li><a class="footer-link" href="/blog">Blog</a></li>
+
+      <li class="header">Repository</li>
+      <li><a class="footer-link" href="{{ site.spec.url.github }}" target="_blank">GitHub</a></li>
+      <li><a class="footer-link" href="{{ site.spec.url.rubygems }}" target="_blank">RubyGems.org</a></li>
+    </ul>
+
+    <ul>
+      <li class="header">Documantation</li>
+        {% for atcl in site.data.document.contents %}
+          {% for post in atcl %}
+            {% if post.title and post.num <= 10 %}
+              <li><a class="footer-link" href="{{ site.url }}{{post.path}}">{{post.num}}. {{post.title}}</a></li>
+            {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </ul>
+
+    <ul class="sub">
+        {% for atcl in site.data.document.contents %}
+          {% for post in atcl %}
+            {% if post.title and post.num > 10 %}
+              <li><a class="footer-link" href="{{ site.url }}{{post.path}}">{{post.num}}. {{post.title}}</a></li>
+            {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  </nav>
+  <div id="copyright">&#169; Copyright 2017, {{ site.owner.name }}<span>This website powered by Jekyll with <a href="http://mmistakes.github.io/skinny-bones-jekyll/">Skinny Bones</a></span></div>
+</footer>

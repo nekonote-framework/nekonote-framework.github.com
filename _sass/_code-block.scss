@@ -1,0 +1,11 @@
+.code-block-command {
+  > pre {
+    margin-bottom: 0.4em;
+  }
+}
+.code-block-result {
+  color: #808080;
+  > pre {
+    margin-top: 0;
+  }
+}

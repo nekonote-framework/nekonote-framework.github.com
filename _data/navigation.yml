@@ -1,0 +1,13 @@
+# Site navigation links
+
+- title: Documentation
+  url: /document
+  excerpt:
+
+- title: Contribute
+  url: /contribute
+  excerpt:
+
+- title: Blog
+  url: /blog
+  excerpt:

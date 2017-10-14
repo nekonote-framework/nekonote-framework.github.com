@@ -1,0 +1,123 @@
+$footer-bg-color:         #99003d;
+$footer-text-color:       #ffcce0;
+$footer-text-ref-color:   #ff80bf;
+$footer-header-color:     #ff3385;
+$footer-link-hover-color: #ff0066;
+$footer-field-name-color: deeppink;
+footer#layout-footer {
+  margin-top: 4em;
+  clear: both;
+  height: 100%;
+  width: 100%;
+  background-color: $footer-bg-color;
+  font-size: 90%;
+
+  nav {
+    @include small_screen {
+      padding-left: 4em;
+    }
+  }
+  @include media($small) {
+    background-image: url('/images/logo.png');
+    background-position: 95% 95%;
+    background-repeat: no-repeat;
+    background-size: 15em 5em;
+  }
+  @include media($medium) {
+    background-position: 90% 90%;
+  }
+  #copyright {
+    margin-left: 4em;
+    padding-bottom: 2em;
+    color: $footer-text-color;
+    font-size: 80%;
+    span {
+      font-size: 90%;
+      color: $footer-text-ref-color;
+      padding-left: 0.6em;
+      display: block;
+      a {
+        &:link {
+          color: $footer-text-ref-color;
+        }
+        &:visited {
+          color: $footer-text-ref-color;
+        }
+        &:hover {
+          color: $footer-text-ref-color;
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+      &:link {
+        color: $footer-text-color;
+      }
+      &:visited {
+        color: $footer-text-color;
+      }
+      &:hover {
+        color: $footer-text-color;
+      }
+    }
+  }
+  ul {
+    @include small_screen {
+      display: inline;
+      padding-left: 10em;
+      &.sub {
+        margin-top: 0em;
+      }
+    }
+    &.sub {
+      margin-top: 6em;
+    }
+    display: inline-block;
+    vertical-align: top;
+    padding: 0em;
+    margin: 2em 0em 1em 2em;
+    &:first-of-type {
+      margin-left: 6em;
+    }
+    li {
+      &:not(.header) {
+        color: $footer-text-color;
+        padding-top: 0.2em;
+        font-size: 95%;
+        list-style-type: circle;
+        margin-left: 3em;
+      }
+      &.header {
+        padding: 0em;
+        margin-left: 0em;
+        color: $footer-header-color;
+        font-weight: bold;
+        list-style-type: none;
+        &:first-child {
+          margin-top: 1em;
+        }
+        &:not(:first-child) {
+          margin-top: 2em;
+        }
+      }
+      span {
+        padding-right: 0.6em;
+        color: $footer-field-name-color;
+      }
+      a {
+        text-decoration: underline;
+        font-size: 95%;
+        font-weight: bold;
+        &:link {
+          color: $footer-text-color;
+        }
+        &:visited {
+          color: $footer-text-color;
+        }
+        &:hover {
+          color: $footer-link-hover-color;
+        }
+      }
+    }
+  } // ul
+}
