@@ -34,8 +34,8 @@ owner:
   disqus-shortname:
 
 # server
-# host: 0.0.0.0 # FIXME
-# port: 5000 # FIXME
+host: 0.0.0.0
+port: 8080
 
 # Jekyll configuration
 sass:
