@@ -15,6 +15,9 @@ It's the simplest way installing {{site.product}} from _RubyGems.org_.
 {:class="cb-title"}
 ```bash
 gem install nekonote-framework
+
+# In case of 'nekonote-framework' was not found you must use --pre option to install beta version
+gem install nekonote-framework --pre
 ```
 
 After installing {{site.product}}, it's possible to run `nekonote` command on your teminal.
