@@ -49,7 +49,7 @@ nekonote new env staging --root /path/to/app/root
       Created a new environment 'staging' on the application /path/to/app/root/my-project/
 
     Note:
-      In order to the environment you created, you need to set 'staging' to a shell variable called NEKONOTE_ENV.
+      In order to use the environment you created, you need to set 'staging' to a shell variable called NEKONOTE_ENV.
 ```
 {:class="code-block-result"}
 

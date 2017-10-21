@@ -2,7 +2,6 @@
   <nav>
     <ul>
       <li class="header">Information</li>
-      <li><a class="footer-link" href="{{ site.owner.web }}" target="_blank">Contact Developer</a></li>
       <li><a class="footer-link" href="{{ site.spec.url.license }}" target="_blank">License</a></li>
       <li><a class="footer-link" href="/blog">Blog</a></li>
 
@@ -32,5 +31,5 @@
       {% endfor %}
     </ul>
   </nav>
-  <div id="copyright">&#169; Copyright 2017, {{ site.owner.name }}<span>This website powered by Jekyll with <a href="http://mmistakes.github.io/skinny-bones-jekyll/">Skinny Bones</a></span></div>
+  <div id="copyright">&#169; Copyright 2017, <a href="{{ site.owner.web }}" target="_blank">{{ site.owner.name }}<span>This website powered by Jekyll with <a href="http://mmistakes.github.io/skinny-bones-jekyll/">Skinny Bones</a></span></div>
 </footer>
