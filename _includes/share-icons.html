@@ -1,4 +1,4 @@
-{% capture doc_url %}{{site.url}}{% if page.url %}{{page.url}}.html{% endif %}{% endcapture %}
+{% capture doc_url %}{{site.link}}{% if page.url %}{{page.url}}.html{% endif %}{% endcapture %}
 {% capture entitiled %}{{ page.title | escape | append: ' - ' | append: site.title}}{% endcapture %}
 <div id="fb-root"></div>
 <div class="inline-btn">
@@ -8,7 +8,7 @@
   <div><script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script><script type="IN/Share" data-url="{{doc_url}}"></script></div>
   <div><script src="https://apis.google.com/js/platform.js" async defer></script><div class="g-plusone" data-size="medium" data-annotation="none"></div></div>
   <div>
-    <div class="line-it-button" data-lang="ja" data-type="share-a" data-url="{{doc_url}}" style="display: none;"></div>
+    <div class="line-it-button" data-lang="en" data-type="share-a" data-url="{{doc_url}}" style="display: none;"></div>
     <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
   </div>
 </div>
