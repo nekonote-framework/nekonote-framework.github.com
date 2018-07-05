@@ -17,6 +17,7 @@ Their names are starting with `__` as prefix to avoid duplicate name.
 # The Callable Methods in Business Logic
 
 |:-|:-|
+[__root](#root)|Returns application root.
 [__assign](#assignlist)|Assigns specific variables into tempaltes.
 [__set_content_type](#setcontenttypetype)|Sets Content-Type header by a specific type.
 [__set_header](#setheaderfield-value)|Sets a specific response header.
@@ -30,9 +31,16 @@ Their names are starting with `__` as prefix to avoid duplicate name.
 [__env_keys](#envkeys)|Returns the list of field names for __env_get.
 [__setting_get](#settinggetfields)|Returns values from user configuration files by some specific field names.
 [__setting_keys](#settingkeys)|Returns the list of top level field names from user setting files for __setting_get.
+[__set_template](#settemplatetemplate)|Sets template.
+[__set_layout](#setlayoutlayout)|Sets layout.
 [__redirect](#redirectdest-code302)|Issues HTTP redirect.
 
 <p class="tip">The above methods are defined as instance methods and its accessibilities are <code>protected</code>.</p>
+
+### __root
+{:class="ck-title"}
+
+It returns a string value as the application root.
 
 ### __assign(list)
 {:class="ck-title"}
@@ -314,6 +322,27 @@ end
 {:class="ck-title"}
 
 Returns the list of top level field names from user setting files for `__setting_get`. It returns `array`.
+
+
+### __set_template(template)
+{:class="ck-title"}
+
+Sets template. It overwrites configurations in `route.yml`.
+
+|parameter|type|required|description|
+|:-|:-|:-|
+|**template**|string|yes|a relative path to template from `template/` directory. Value should be set without '.tpl' like `template` directive in `route.yml`.
+
+
+### __set_layout(layout)
+{:class="ck-title"}
+
+Sets layout. It overwrites configurations in `route.yml`.
+
+|parameter|type|required|description|
+|:-|:-|:-|
+|**layout**|string|yes|a relative path to layout from `template/layout/` directory. Value should be set without '.tpl' like `layout` directive in `route.yml`.
+
 
 ### __redirect(dest, code=302)
 {:class="ck-title"}

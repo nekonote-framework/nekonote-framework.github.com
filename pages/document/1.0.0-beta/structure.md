@@ -67,14 +67,16 @@ Because you have already installed {{site.product}} by `gem` command, and {{site
 
 After you ran `nekonote new app` on terminal you will get an application structure that are as follows.
 
-|**cache**|The directory for page cache files.|
 |**config.ru**|The Rackup file.
 |**Gemfile**|It's a well-known file.
-|**handler**|The directory for Handler classes.
-|**lib**|The directory for libraries. It's empty.
-|**log**|The directory for logfiles.
 |**preference**|The directory for the configuration files in {{site.product}}.
+|**handler**|The directory for Handler classes.
+|**lib**|The directory for libraries. It's empty for now.
 |**public**|The directory for static files (e.g. css, js, img).
-|**static**|The directory for template and layout files.
+|**template**|The directory for templates.
+|**template/layout**|The directory specifically for layout files.
+|**cache**|The directory for page cache files.|
+|**log**|The directory for logfiles.
+|**tmp**|Just locate puma's pid file.
 
 {% include doc-nav-link.html prev=site.data.document.contents.command next=site.data.document.contents.env %}

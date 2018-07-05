@@ -35,9 +35,9 @@ That's because the value of `path` directive is set to `/`.
 You are supposed to set a method name to the `execute` directive.
 The method will be called when the route matches on a request.
 
-A template file named `static/template/welcome/index.tpl` will be used on the above route.
+A template file `template/welcome/index.tpl` will be used on the above route.
 
-In case of a layout file hasn't been set, the default layout will be used. It is `static/layout/default.tpl`.
+In case of `layout` directive hasn't been set, the default layout `template/layout/default.tpl` will be used when it was found.
 
 The above `css` and `page-title` are custom fields. Custom fields are assigned into templates automatically.
 It's possible to reference the above value writing \{\{field-name}} in templates. e.g. \{\{css}}, \{\{page-title}}
@@ -79,8 +79,8 @@ The following is optional directives which can be set in each of routes.
 |**method**|string|Acceptable HTTP method names in the route. The default is null and all request HTTP methods will be accepted. It's possible to set any number of values by comma.|-|POST, GET|
 |**params**|string|Configuring the request parameters. The default is null and that means all request parameters are accpected. The format is,<br />"**parameter_name: {int\|string\|array\|float\|bool}**"|-|foo=int, bar=string, baz=bool|
 |**content**|string|Configuring format of response body. You must choose from following words, 'html', 'json', 'xml', 'plain'. Default is 'html'. If you set invalid words, The reponse body format will be set 'plain'.|html|json|
-|**template**|string\|false|A template name. The default is made form class name of Handler.<br />e.g. _FooHandler_ will use _static/template/foo.tpl_ for the default.<br />When you specified some template name here and if it doesn't exist or not readable the exception will raise. false to no template will be used.|*It depends on class name*|home/mypage|
-|**layout**|string\|false|A layout name. The default is 'default' and it indicates _static/layout/default.tpl_. If the default layout doesn't exist or not readable, layout is not used. When you specified some layout name and if it doesn't exist or not readable the exception will raise. false to no layout will be used.|default|common|
+|**template**|string\|false|A template name. The default will be made form class name of Handler.<br />e.g. _FooHandler_ will use _template/foo.tpl_ as the default.<br />When you specified some template name here and if it doesn't exist or not readable then an exception will raise. Setting false to no template will be used.|*It depends on class name*|home/mypage|
+|**layout**|string\|false|A layout name. The default layout _template/layout/default.tpl_ will be used as default if it was found. When you specified some layout name and if it doesn't exist or not readable then an exception will raise. Setting false to no layout will be used.|default|common|
 |**page_cache_time**|int|Page caching will be turned on when the value here is set to some number. Please set a ache time in seconds. More information please see <a href="{{site.data.document.contents.page_cache.path}}">{{site.data.document.contents.page_cache.num}}. {{site.data.document.contents.page_cache.title}}</a>.|-|3600|
 |**include**|string|Configuring the directives from route_include.yml.|-|common
 
@@ -120,7 +120,9 @@ FooHandler
 
 # Custom Fields
 
-In case of there is a directive except thouse mentioned above, it's assumed as custom field.
+Custom fields are magic directives in `route.yml` to reference some values in Handler classes or templates on the route matched.
+
+Any directive names except the optional directives will be treated as custom fields.
 
 ### Example
 
@@ -280,7 +282,7 @@ class ArticleHandler < BaseHandler
 end
 ```
 
-### static/template/article.tpl
+### template/article.tpl
 {:class="cb-title"}
 
 {% raw %}

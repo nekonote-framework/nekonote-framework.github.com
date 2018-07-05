@@ -65,7 +65,7 @@ end
 
 You may use a special liquid tag called `__setting_get` to get the values declared in user configuration files.
 
-### static/template/example.tml
+### template/example.tml
 {:class="cb-title"}
 
 {% raw %}
