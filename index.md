@@ -87,7 +87,7 @@ image:
       <div class="feature-icon" style="background-image: url('{{site.url}}/images/feature-icons/gui-debuger.png');"></div>
       <h2 class="post-title">GUI Debuger</h2>
       <p class="post-excerpt">
-        The GUI-based debugger can display exception's details on your browser.
+        It can display exception's details on your browser.
       </p>
     </div><!-- /.tile -->
 
@@ -95,7 +95,7 @@ image:
       <div class="feature-icon" style="background-image: url('{{site.url}}/images/feature-icons/logger.png');"></div>
       <h2 class="post-title">Logger</h2>
       <p class="post-excerpt">
-        It provides you thread-safe logging through global method called 'logwrite'.
+        It provides you thread-safe logging.
       </p>
     </div><!-- /.tile -->
 
