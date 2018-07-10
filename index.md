@@ -101,9 +101,9 @@ image:
 
     <div class="tile">
       <div class="feature-icon" style="background-image: url('{{site.url}}/images/feature-icons/template-engine.png');"></div>
-      <h2 class="post-title">Liquid Template Engine</h2>
+      <h2 class="post-title">Template Engine</h2>
       <p class="post-excerpt">
-        The templating engine in {{site.product}} is Liquid.
+        The templating engine on {{site.product}} is Liquid.
       </p>
     </div><!-- /.tile -->
 </div><!-- /.tiles -->
