@@ -18,13 +18,13 @@ footer#layout-footer {
     }
   }
   @include media($small) {
-    background-image: url('/images/logo.png');
-    background-position: 95% 95%;
-    background-repeat: no-repeat;
-    background-size: 15em 5em;
+    /* background-image: url('/images/logo.png'); */
+    /* background-position: 95% 95%; */
+    /* background-repeat: no-repeat; */
+    /* background-size: 15em 5em; */
   }
   @include media($medium) {
-    background-position: 90% 90%;
+    /* background-position: 90% 90%; */
   }
   #copyright {
     margin-left: 4em;
