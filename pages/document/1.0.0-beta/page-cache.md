@@ -15,7 +15,7 @@ Serialized HTTP responses are written with a timestamp into the files in `cache`
 
 <p class="tip">You are not supponsed to use page caching for pages using session management. Page caching is supposed to used for static pages.</p>
 
-# Turn on Page Caching
+# Turning On Page Caching
 
 Page Caching is disabled by default. So you need to turn it on in each route by `page_cache_time` directive.
 
@@ -42,7 +42,7 @@ As previously mentioned, cache files are bustered automatically after its cache 
 
 In case of there is a need to reflesh the cache data, the following solutions must be helpful.
 
-## Cache-Busting by URL
+## Cache-Busting By URL
 
 The cache file will be used when URL matched completely.
 
@@ -56,7 +56,7 @@ Because there is the cache file for `http://example.com/path/to/static` but, the
 
 The URL `http://example.com/path/to/static?foo` will return the cached response after the first time.
 
-## Cache-Busting by Removing Cache Files
+## Cache-Busting By Removing Cache Files
 
 The cache files are created in `cache` directory and are named as SHA-256 hash value.
 

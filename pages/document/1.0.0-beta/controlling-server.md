@@ -132,7 +132,7 @@ bind "ssl://#{_host}:#{_port}?key=/path/to/your/private.key&cert=/path/to/your/c
 Running `nekonote server start` will launch the web server with enabling SSL.
 Clients must request the server with `https://`.
 
-# Debugging for Deamonized Server
+# Debugging For Deamonized Server
 
 When `daemonize true` is set in `preference/your_environment/server/puma.rb` you can't see any messages on STDOUT nor STDERR.
 That's because file descriptors are closed.

@@ -14,7 +14,7 @@ Their names are starting with `__` as prefix to avoid duplicate name.
 
 {% include toc.html %}
 
-# The Callable Methods in Business Logic
+# The Callable Methods In Business Logic
 
 |:-|:-|
 [__root](#root)|Returns application root.
@@ -382,7 +382,7 @@ end
 
 The above example redirects the request to `/path/to/some/page` in the same URI scheme and FQDN.
 
-# Predefined Properties in Handlers
+# Predefined Properties In Handlers
 
 The following properties are predefined in Handler classes. You may use them when you need it.
 
@@ -394,7 +394,7 @@ property name|type|description
 **@error**|some Exception|This varibale will be set an object of some Exception class when a fatal error raised. It will be set nil if no exception raised in program.
 **@custom_fields**|hash|This varibale will be set the custom feilds in that route. It will be set an empty hash object even if any custom feild doesn't exist.
 
-# Predefined Public Methods in Handlers
+# Predefined Public Methods In Handlers
 
 These methods are special. You are not supposed to overwrite them.
 

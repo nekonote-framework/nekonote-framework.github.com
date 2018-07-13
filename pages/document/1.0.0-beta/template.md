@@ -17,7 +17,7 @@ Touse templates are rendered by a template system called <a href="https://shopif
 
 You may use _Liquid_'s features such as operators, variables, comment, control structures, filters, tags, more in your templates.
 
-# Directory for Templates and Layouts
+# Directory For Templates And Layouts
 
 Templates and layouts files are supposed to be placed to the directories below.
 
@@ -29,9 +29,9 @@ Layout files
 
 Template files are rendered into the placement '{% raw %}{{content}}{% endraw %}' that's supposed to be wrriten in layout files.
 
-# Creating Template or Layout Files
+# Creating Template Or Layout Files
 
-## Creating a Template File
+## Creating A Template File
 
 Creating a template file is just typing `nekonote new template <template_name>` on your teminal.
 
@@ -66,7 +66,7 @@ it will be created automatically and <code>top.tpl</code> is created in that dir
 
 <p class="tip">You may use an abbreviation <code>tpl</code> like <code>nekonote new tpl &lt;template_name></code>.</p>
 
-## Creating a Layout Files
+## Creating A Layout Files
 
 It's possible to create a layout file as well by typing `nekonote new layout <layout_name>`.
 
@@ -105,7 +105,7 @@ As previously mentioned at [{{site.data.document.contents.business_logic.num}}. 
 
 ### Creating Necessary Parts
 
-### on Terminal
+### on terminal
 {:class="cb-title"}
 
 ```bash
@@ -115,7 +115,7 @@ nekonote new layout common
 nekonote new handler example
 ```
 
-### Defining a Route
+### Defining A Route
 
 ### preference/your_environment/route.yml
 {:class="cb-title"}
@@ -246,7 +246,7 @@ end
 ```
 
 
-# Custom Tags for {{site.product}}
+# Custom Tags For {{site.product}}
 
 There are the special tags for {{site.product}}. You may use them in your templates.
 

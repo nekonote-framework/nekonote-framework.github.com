@@ -29,13 +29,13 @@ varibale name|type|description|default
 **_httponly**|boolean|Accessibility of a cookie from javascript. Setting true to cookie is HttpOnly and can not access the cookie from javascript.|false
 **_sidbits**|int|Length of session ID. The default value is 128 bits.|128
 
-# Optional Directives for Session::Pool
+# Optional Directives For Session::Pool
 
 variable name|type|description|default
 :-|:-|:-|:-
 **_drop**|boolean|True to session data will be deleted precisely from the session cache.|false
 
-# Required Directives for Session::Dalli
+# Required Directives For Session::Dalli
 
 `Session::Dalli` uses memcached servers for storing session data.
 There are the options to configure memcached servers. More information is later point of this chapter.
@@ -45,7 +45,7 @@ varibale name|type|description|example
 **_servers**|array|Information of the memcached server to add. Need to set as "host:port:weight". 'port' and 'weight' are optional. It's possible to set any number of servers by comma.|['127.0.0.1:11211']
 **_connection_pooling**|boolean|True to enabling connection pooling. False to disabling connection pooling|false
 
-# Optional Directives for Session::Dalli
+# Optional Directives For Session::Dalli
 
 varibale name|type|description|default
 :-|:-|:-|:-
@@ -184,7 +184,7 @@ If you need to disable failover you should set `_failover` to `false` in your `m
 
 Stored data in memecached server will be lost when server has gone, but failover feature can keep using available memcached server even if some of servers has gone.
 
-# The Object for Session Management
+# The Object For Session Management
 
 `Rack::Session::Abstract::SessionHash` object is supposed to be set to an instance variable called `@session` in Handler classes.
 
@@ -193,7 +193,7 @@ When any middleware isn't enabled which about session management, `nil` is set t
 Session won't start automatically. Session starts when the following methods are called:
 `@session[key] = value`, `@session.clear`, `@session.destroy`, `@session.update(hash)`, `@session.replace(hash)`, `@session.delete(key)`.
 
-# Instance Methods for Rack::Session::Abstract::SessionHash
+# Instance Methods For Rack::Session::Abstract::SessionHash
 
 The following are methods which can be called through the value of `@session`.
 

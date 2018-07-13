@@ -119,7 +119,7 @@ _rules|hash|Rules for access restrcition. Please see the example below.
 ### preference/your_environment/middlewares.rb
 {:class="cb-title"}
 ```rb
-# Configuring access restriction by IP addresses
+# access restriction by IP addresses
 _rules = {
     # You may append a subnet mask to IP address.
     # You may add any number of IP addresses by comma which allowed accessing the server.

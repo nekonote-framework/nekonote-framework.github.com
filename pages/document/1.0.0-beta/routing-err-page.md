@@ -12,7 +12,7 @@ is_doc: true
 
 If some exception raised on dealing with a request, the request is forwarded to the specified error page automatically.
 
-# Routes for Error Page
+# Routes For Error Page
 
 There are the following four types routes for error page.
 
@@ -23,7 +23,7 @@ There are the following four types routes for error page.
 |**fatal**|This route is used when a fatal error raised in program. The exception object is set to a property called @error in a Handler you specified.
 |**not_found**|This route is used when a requested file dosen't exist under the "public" directory.
 
-# Directives for Error Routes
+# Directives For Error Routes
 Each route can be set the directives below. Almost directives are the same as `route.yml`.
 
 |field name|description|default value|example value|
@@ -118,7 +118,7 @@ When a fatal error raised in your program, The request will be forwarded to the 
 
 <p class="tip">On <code>not_found</code> route, a response body for it will be set to <code>Not Found: /path/to/request</code> with code 404.</p>
 
-# ShowExceptions and 'fatal' Route
+# ShowExceptions And 'fatal' Route
 While a middleware called `ShowExceptions` is enabled, the request will not be forwarded to `fatal` route.
 
 `ShowExceptions` shows exception details on your web blowser instead.

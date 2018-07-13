@@ -21,7 +21,7 @@ The directory *my_project* will be created on the current directory.
 
 Would you prefer to create it to onto some specific directory? You may give application name as absolute path by `--root` option.
 
-# Installing the Dependencies
+# Installing The Dependencies
 
 Installing the dependencies is not completed yet. You have to install the dependent gem libraries via Bundler.
 
@@ -63,7 +63,7 @@ Because you have already installed {{site.product}} by `gem` command, and {{site
 
 <p class="tip">When you didn't installed {{site.product}} to system gems, you must prepend <code>bundle exec</code>.</p>
 
-# Structure of Application
+# The Application Structure
 
 After you ran `nekonote new app` on terminal you will get an application structure that are as follows.
 

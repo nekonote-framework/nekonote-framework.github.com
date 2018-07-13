@@ -76,7 +76,7 @@ Returns the current envinronment (NEKONOTE_ENV).
 ### Return Values:
 It returns `string`.
 
-# Referencing Environment Variables from Templates
+# Referencing Environment Variables From Templates
 
 For getting values in liquid templates,
 

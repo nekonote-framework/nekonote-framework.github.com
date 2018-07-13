@@ -13,7 +13,7 @@ It works as Model part.
 
 {% include toc.html %}
 
-# The Procedure for Business Logic
+# The Flow Of Processing
 
 1. Some route matches against a URL.
 1. A Handler class which set in that route is chosen.
@@ -158,7 +158,7 @@ Your program here.
 This method will be called at last.
 ```
 
-# Implementing Methods for Code-Reuse
+# Implementing Methods For Code-Reuse
 
 ### handler/base.rb
 {:class="cb-title"}
@@ -192,7 +192,7 @@ Your program here.
 Reuseable code was called from HelloWorldHandler.
 ```
 
-# Exiting from Program
+# Exiting From Program
 When you need to exit in the middle of business logic, you must make your methods returning `::Nekonote::Handler::EXIT`.
 
 For instance, when `__pre` method returns `::Nekonote::Handler::EXIT`, the methods which are supposed to be called after it will be ignored.

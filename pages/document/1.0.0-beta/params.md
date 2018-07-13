@@ -160,7 +160,7 @@ Checks if the value of given parameter name exist in the POST data or the query 
 It returns `true` when the specified parameter exists in POST data or query string.
 
 
-# Sanitizing Request Parameters by Expected Types
+# Sanitizing Request Parameters By Expected Types
 
 Each parameter declared in `route.yml` can be specified its expected type.
 
@@ -221,7 +221,7 @@ class ExampleHandler < BaseHandler
 end
 ```
 
-# Filling for Missing Parameters
+# Filling For Missing Parameters
 
 If some parameters are missing which declared in `route.yml`, they will be filled as sanitized parameters.
 

@@ -38,7 +38,7 @@ server:
 
 All of files located in `preference/your_environment/setting` directory are loaded automatically and recursively.
 
-## Getting values from Handlers
+## Getting Values From Handlers
 
 ### handler/example.rb
 {:class="cb-title"}
@@ -86,7 +86,7 @@ server, mysql, host: mysql.example.com
 ```
 {:class="code-block-result"}
 
-# Nekonote::Setting class
+# Nekonote::Setting Class
 
 `Nekonote::Setting` is the class to get some values from user configuration files.
 
@@ -132,7 +132,7 @@ It returns `hash`.
 
 # More Examples
 
-## Getting Values as Array
+## Getting Values As Array
 
 ### preference/your_environment/example.yml
 {:class="cb-title"}

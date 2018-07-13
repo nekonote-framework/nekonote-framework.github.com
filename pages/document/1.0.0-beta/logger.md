@@ -11,7 +11,7 @@ When you trun on the logger in `logger.yml`, `logwrite` method is callable in to
 
 {% include toc.html %}
 
-# Configuring the Logger
+# Configuring The Logger
 
 It's possible to configure the logger through `logger.yml`.
 
@@ -36,7 +36,7 @@ name|parent|description|default value
 **sleeptime**|-|Program will wait for this seconds after rotation.|0.1
 **flush**|-|false to disbale flushing buffered data after writing a log message to the log file.<br>true to enable flushing buffered data.|true
 
-# Turning on the Logger
+# Turning On The Logger
 
 You need to turn on the logger by `logger.yml` if the logger is disabled.
 The logger will be enabled by default after lintalling {{site.product}}. So there is no need to do for using the logger.
@@ -194,7 +194,7 @@ It can prevent eating up available hard drive space by single log file.
 The logger can rotate your log files by removing the oldest ones and creating new ones.
 That will be done automatically when the threshold reached which set in `logger.yml`.
 
-## Rotation by File-Size
+## Log Rotation By File-Size
 
 If some value is set to `limit` directive in `logger.yml`,
 The logger rotates files when file size of the log file reached the threshold set in `logger.yml`.
@@ -211,9 +211,9 @@ No `K`, `M`, `G` at the end of the value is assumed that it's just 'byte'.
 limit: 500M #=> log files are rotated only if their file-size is bigger than 500 megabytes
 ```
 
-## Rotating Files Periodically
+## Log Rotation Periodically
 
-When `"DAILY"` or `"WEEKLY"` or `"MONTHLY"` is set in `limit` directive, log files are rotated daily or weekly or monthly.
+When `"DAILY"` or `"WEEKLY"` or `"MONTHLY"` is set in the `limit` directive, log files are rotated daily or weekly or monthly.
 
 ```bash
 limit: WEEKLY #=> log files are rotated weekly
@@ -233,7 +233,7 @@ You may configure how many old log files are supposed to be keeping.
 
 The default value of `keep` directive is set `0`. The meaning of `0` is keeping all old log files and any log files are not removed by rotation.
 
-### example
+### Example
 
 When you need to be kept four of old log files, you need to set `4` to `keep` directive in `logger.yml`.
 

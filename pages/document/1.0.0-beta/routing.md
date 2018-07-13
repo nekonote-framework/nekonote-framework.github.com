@@ -10,7 +10,7 @@ URLs are restricted to the routes only declared in `route.yml`.
 
 {% include toc.html %}
 
-# Configuring A Route for Home Page
+# Configuring A Route For Home Page
 
 After generating an application structure was, You will only have the route to home page.
 
@@ -137,7 +137,7 @@ FooHandler:
 ```
 <p class="tip"><code>handler</code> is the reserved word. It's not possible to set it as custom fields.</p>
 
-### Calling Custom Fields in Liquid templates
+### Calling Custom Fields In Liquid templates
 {:class="cb-title"}
 
 {% raw %}
@@ -148,7 +148,7 @@ Output is => {{name}} is {{state}}.
 
 The above will be replaced to `Output is => Luna is kittien.`
 
-### Calling Custom Fields in Handler
+### Calling Custom Fields In Handler
 {:class="cb-title"}
 
 ```ruby
@@ -161,7 +161,7 @@ end
 
 <p class="tip">Even if there is no custom field, the property <code>@custom_fields</code> will be set an empty Hash object.</p>
 
-# Evaluating 'path' directive as Regular Expression
+# Evaluating 'path' Directive As Regular Expression
 
 `path_as_regexp` is directive for fixing whether value of `path` directive should be evaluated as regular expression or not.
 
@@ -207,7 +207,7 @@ e.g. `/+example$/ixu` will be converted to the Regexp object `/^\/+example$\/ixu
 
 The default value of `allow_dup_slash` is `false`.
 
-# Setting Routes with URL path parameters
+# Setting Routes With URL Path Parameters
 There is no need to rewrite URLs for URL path parameters in web server side.
 
 Here is showing you how to set up REST like URLs.
@@ -264,9 +264,9 @@ class ArticleHandler < BaseHandler
 end
 ```
 
-## Calling the values from Templates
+## Referencing Some Values From Templates
 
-When you would like to reference the values in templates, you have to assign them by yourself.
+When you would like to reference some values in templates, you have to assign them by yourself in Handler classes.
 
 You need to set `request.path_params` to the argument of `__assign` method for it.
 
