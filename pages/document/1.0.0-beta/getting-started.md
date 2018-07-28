@@ -34,6 +34,6 @@ name|version|description
 **liquid**|>= 4.0|Liquid markup language.
 **puma**|>= 3.8|A Ruby/Rack web server built for concurrency.
 **color_echo**|>= 2.0|Colorizing output on terminal.
-**simple_rotate**|>= 1.2|Thread safety/multiprocess-safe Logger. * Tring to remove from the dependencies.
+**simple_rotate**|>= 1.2|A thread-safe logger. * Tring to remove from the dependencies.
 
 {% include doc-nav-link.html next=site.data.document.contents.command %}

@@ -170,21 +170,26 @@ end
 
 The default value of `path_as_regexp` is `false`.
 
-# Route Options
+# Routing Options
+There are some optional preferences for routing.
 
 ## path_as_regexp
+Whether to use a regular expression match or not.
 
-### Setting to evaluate 'path' directive as regular expression
+`true` to values set in 'path' directive will be converted to regular expression, `false` to not, the default is `false`.
+
+### setting to perform a regular expression match 
 {:class="cb-title"}
 
 ```yaml
+# Routing options must be written into 'preference' directive.
 preference:
     path_as_regexp: true
 ```
 
 `^/` will be put to beginning automatically.
 
-It means, `path: /example$` will converted to Regexp object `/^\/example$/`.
+It means, `path: /example$` will converted to a Regexp object `/^\/example$/`.
 
 ### Regular Expression Options
 
@@ -199,13 +204,23 @@ When there is unknown regexp option, it will not evaluated as option.
 e.g. `/+example$/ixu` will be converted to the Regexp object `/^\/+example$\/ixu/`
 
 ## allow_dup_slash
+Whether to allow duplicate slash on request URLs.
 
-`allow_dup_slash` directive fixing whether routes match on URLswhich  contained duplicate slashes.
+`true` to routes will match even if a request URL contains duplicate slashes such as `http://example.com//path/to//some`,
 
-* true to routes will match even if a URL contains duplicate slashes such as `http://example.com//path/to//some`.
-* false to does not allow duplicate slashes.
+`false` to does not convert duplicate slashes to single slash on requet URLs.
 
-The default value of `allow_dup_slash` is `false`.
+The default is `false`.
+
+## template_file_extension
+A file extension for template files.
+
+The default is `tpl`, so your template files are supposed to be named like `example.tpl`.
+
+## layout_file_extension
+A file extension for layout files.
+
+The default is `tpl`, so your layout files are supposed to be named like `example.tpl`.
 
 # Setting Routes With URL Path Parameters
 There is no need to rewrite URLs for URL path parameters in web server side.
