@@ -79,8 +79,8 @@ The following is optional directives which can be set in each of routes.
 |**method**|string|Acceptable HTTP method names in the route. The default is null and all request HTTP methods will be accepted. It's possible to set any number of values by comma.|-|POST, GET|
 |**params**|string|Configuring the request parameters. The default is null and that means all request parameters are accpected. The format is,<br />"**parameter_name: {int\|string\|array\|float\|bool}**"|-|foo=int, bar=string, baz=bool|
 |**content**|string|Configuring format of response body. You must choose from following words, 'html', 'json', 'xml', 'plain'. Default is 'html'. If you set invalid words, The reponse body format will be set 'plain'.|html|json|
-|**template**|string|A template name.<br>e.g. setting 'home/mypage' to searching 'template/home/mypage.tpl' by default. You may change a file extension for template files by routing options.|-|home/mypage|
-|**layout**|string|A layout name.<br>e.g. setting 'common' to searching 'template/layout/common.tpl' by default. You may change a file extension for layout files by routing options.|-|common|
+|**template**|string|A template name.<br>e.g. setting 'home/mypage' to searching 'template/home/mypage.tpl' by default. You may change a file extension for template files by routing options. Setting false to no template|-|home/mypage|
+|**layout**|string|A layout name.<br>e.g. setting 'common' to searching 'template/layout/common.tpl' by default. You may change a file extension for layout files by routing options. Setting false to no layout.|-|common|
 |**page_cache_time**|int|Page caching will be turned on when the value here is set to some number. Please set a ache time in seconds. More information please see <a href="{{site.data.document.contents.page_cache.path}}">{{site.data.document.contents.page_cache.num}}. {{site.data.document.contents.page_cache.title}}</a>.|-|3600|
 |**include**|string|Configuring the directives from route_include.yml.|-|common
 
