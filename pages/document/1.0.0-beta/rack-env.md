@@ -76,21 +76,4 @@ Returns the current envinronment (NEKONOTE_ENV).
 ### Return Values:
 It returns `string`.
 
-# Referencing Environment Variables From Templates
-
-For getting values in liquid templates,
-
-There is the special liquid tag `env_get` to get environment values from templates which for {{site.product}}.
-
-It's possible to get some environment value in templates by {% raw %}{% env_get `key_name` %}{% endraw %}.
-
-### In templates
-{:class="cb-title"}
-
-{% raw %}
-```
-<h1>The query string is {% env_get QUERY_STRING %}.</h1>
-```
-{% endraw %}
-
 {% include doc-nav-link.html prev=site.data.document.contents.business_logic next=site.data.document.contents.user_conf %}

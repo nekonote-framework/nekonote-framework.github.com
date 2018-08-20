@@ -19,7 +19,7 @@ You may use _Liquid_'s features such as operators, variables, comment, control s
 
 # Directory For Templates And Layouts
 
-Templates and layouts files are supposed to be placed to the directories below.
+Templates and layouts files are supposed located to the directories below.
 
 Template files
 : `template/`
@@ -27,7 +27,14 @@ Template files
 Layout files
 : `template/layout/`
 
+Partial template files
+: `template/layout/`
+
 Template files are rendered into the placement '{% raw %}{{content}}{% endraw %}' that's supposed to be wrriten in layout files.
+
+In layout files, the variable named `content` will be set template data.
+
+So there will be '{% raw %}{{content}}{% endraw %}' in your layout files.
 
 # Creating Template Or Layout Files
 
@@ -245,14 +252,15 @@ class ExampleHandler < BaseHandler
 end
 ```
 
-
 # Custom Tags For {{site.product}}
 
-There are the special tags for {{site.product}}. You may use them in your templates.
+There are the special tags for {{site.product}}. You may use them in your template files.
 
-tag name|description
+Any value for parameters below is not allowd surrounding by `""`.
+
+tag name|parameter|description
 :-|:-
-__setting_get|Returns values from user configuration files by some specific field names. This is the same as Nekonote::Setting.get.
-__env_get|Returns the value by a specific key_name. This is the same as Nekonote::Env.get.
+setting_get|key name (multiple is ok by comma)|Returns values from user configuration files by some specific field names. This is the same as Nekonote::Setting.get.
+partial|relative path to file from template/partial (without .tpl)|Loads data from a specific template file.
 
 {% include doc-nav-link.html prev=site.data.document.contents.logger next=site.data.document.contents.static_file %}

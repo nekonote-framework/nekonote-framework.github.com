@@ -212,16 +212,6 @@ Whether to allow duplicate slash on request URLs.
 
 The default is `false`.
 
-## template_file_extension
-A file extension for template files.
-
-The default is `tpl`, so your template files are supposed to be named like `example.tpl`.
-
-## layout_file_extension
-A file extension for layout files.
-
-The default is `tpl`, so your layout files are supposed to be named like `example.tpl`.
-
 # Setting Routes With URL Path Parameters
 There is no need to rewrite URLs for URL path parameters in web server side.
 
