@@ -28,7 +28,7 @@ Layout files
 : `template/layout/`
 
 Partial template files
-: `template/layout/`
+: `template/partial/`
 
 Template files are rendered into the placement '{% raw %}{{content}}{% endraw %}' that's supposed to be wrriten in layout files.
 
