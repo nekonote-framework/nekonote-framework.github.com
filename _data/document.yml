@@ -36,7 +36,7 @@ contents:
     image: doc-index.png
   routing_err_page:
     num: 8
-    title: Error Pages
+    title: Error Routes
     path: /document/1.0.0-beta/routing-err-page.html
     image: doc-index.png
   handler:

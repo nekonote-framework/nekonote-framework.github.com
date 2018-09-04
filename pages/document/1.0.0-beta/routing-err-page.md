@@ -1,5 +1,5 @@
 ---
-title: 8. Error Pages
+title: 8. Error Routes
 permalink: /document/1.0.0-beta/routing-err-page
 layout: article
 is_doc: true
@@ -8,27 +8,24 @@ is_doc: true
 
 {% include toc.html %}
 
-# How It Works
+# Error Routes
 
-If some exception raised on dealing with a request, the request is forwarded to the specified error page automatically.
-
-# Routes For Error Page
-
-There are the following four types routes for error page.
+There are the following four type's Error Routes.
 
 |field name|explaination
 |:-|:-
-|**missing_route**|This route is used when any route does not match a URL. You must set "path_as_regexp" directive to "true" which in route.yml to use this route.
-|**wrong_http_method**|This route is used when some value is set to "method" directive in route.yml and a request HTTP method is not declared in that value.
-|**fatal**|This route is used when a fatal error raised in program. The exception object is set to a property called @error in a Handler you specified.
-|**not_found**|This route is used when a requested file dosen't exist under the "public" directory.
+|**missing_route**|This route is used when any route does not match a URL.
+|**wrong_http_method**|This route is used when a HTTP method in request does not much the value set in "method" directive in route.yml.
+|**fatal**|This route is used when a fatal error raised in your program. The exception object will be set to the property named @error.
+|**not_found**|This route is used when a request file does not exist under the "public" directory.
 
 # Directives For Error Routes
+
 Each route can be set the directives below. Almost directives are the same as `route.yml`.
 
 |field name|description|default value|example value|
 |:-|:-|:-|:-|
-|**handler**|A handler class name used in that route. When some value is set to 'execute' directive in that route, you are supposed to set this directive.|-|ErrorHandler|
+|**handler**|A handler class name to contorl the route. When some value is set to 'execute' directive, then this directive is required.|-|ErrorHandler|
 |**execute**|The same as route.yml.|-|index|
 |**content**|The same as route.yml.|-|html|
 |**template**|The same as route.yml.|-|example/index|
@@ -39,37 +36,45 @@ Each route can be set the directives below. Almost directives are the same as `r
 
 # Configuring Error Routes
 
-The following routes are the default routing for error pages.
+You can configure or turning off Error Routes on `route_error.yml`. 
+
+The following is the default.
 
 ### preference/environment_name/route_error.yml
 {:class="cb-title"}
 
 ```yaml
+# This route is used when any route does not match a URL.
 missing_route:
     handler: ErrorHandler
     execute: missing_route
+    template: error
     layout: error
 
+# This route is used when a HTTP method in request does not much the value set in "method" directive in route.yml.
 wrong_http_method:
     handler: ErrorHandler
     execute: wrong_http_method
+    template: error
     layout: error
 
+# This route is used when a fatal error raised in your program.
+# The exception object will be set to the property named @error.
 fatal:
     handler: ErrorHandler
     execute: fatal
+    template: error
     layout: error
 
+# This route is used when a request file does not exist under the "public" directory.
 not_found:
     handler: ErrorHandler
     execute: not_found
+    template: error
     layout: error
 ```
 
-An application structure you generated will contain `ErrorHandler` class.
-Let's see it.
-
-There is `ErrorHandler` in `handler` directory. It's used in the above routes.
+Your application structure will contain `ErrorHandler` class in the `handler/` directory to control the above routes.
 
 ### handler/error.rb
 {:class="cb-title"}
@@ -112,25 +117,16 @@ class ErrorHandler < BaseHandler
 end
 ```
 
-When a fatal error raised in your program, The request will be forwarded to the `fatal` route in `route_error.yml`.
-
-<p class="tip">When <code>path_as_regexp</code> in <code>route.yml</code> is set to <code>false</code>, <code>missing_route</code> won't be used in any case.</p>
-
-<p class="tip">On <code>not_found</code> route, a response body for it will be set to <code>Not Found: /path/to/request</code> with code 404.</p>
-
 # ShowExceptions And 'fatal' Route
-While a middleware called `ShowExceptions` is enabled, the request will not be forwarded to `fatal` route.
-
-`ShowExceptions` shows exception details on your web blowser instead.
+While `ShowExceptions` is enabled, the request will not be forwarded to `fatal` route. `ShowExceptions` shows exception details on your web blowser instead.
 More information for exception handling is [{{site.data.document.contents.exception.num}}. {{site.data.document.contents.exception.title}}]({{site.data.document.contents.exception.path}}).
 
 <p class="tip">Please try not to be raised any exception in the Handler class for <code>fatal</code> route.</p>
 
 
-# Turning Off Error Pages
+# Turning Off Error Routes
 
-The routes for error pages are optional routes. You may turn off some of them.
-All you have do is commenting out them.
+It's possible to comment out the directives then error routes does not be used.
 
 ### preference/your_environment/route_error.yml
 {:class="cb-title"}
@@ -142,5 +138,6 @@ All you have do is commenting out them.
 #    layout: error
 ```
 
+<p class="tip">While <code>not_found</code> route has not been set, the response will be output <code>Not Found: /path/to/request</code> with HTTP response code 404.</p>
 
 {% include doc-nav-link.html prev=site.data.document.contents.routing next=site.data.document.contents.handler %}

@@ -3,7 +3,6 @@ title: Nekonote Framework
 summary: Simple and Lightweight Ruby Framework for Web Development
 description: Nekonote Framework is a small web application framework that helps your web development.
 locale: en
-url: #https://nekonote-framework.github.io
 link: https://nekonote-framework.github.io
 product: Nekonote Framework
 feed:
@@ -20,6 +19,7 @@ spec:
     github: https://github.com/khotta/Nekonote-Framework
     rubygems: https://rubygems.org/gems/nekonote-framework
     license: https://github.com/khotta/Nekonote-Framework/blob/master/LICENSE
+    changelog: https://github.com/khotta/Nekonote-Framework/blob/master/CHANGELOG.md
 
 # Site owner
 owner:

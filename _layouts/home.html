@@ -8,6 +8,7 @@ layout: base/home
       <h2>{{site.summary}}</h2>
       <a href="{{site.data.document.contents.getting_started.path}}" class="btn-inverse">Getting Started</a>
       {% if site.spec.latest.version %}<span style="padding-left: 1em;"></span><a href="{{site.url}}{{site.spec.latest.path}}" class="btn-inverse">Latest {{site.spec.latest.version}} Available</a>{% endif %}
+      {% if site.spec.latest.version %}<span style="padding-left: 1em;"></span><a href="{{site.spec.url.changelog}}" class="btn-inverse" target="_blank">Changelog</a>{% endif %}
     </div>
   </div>
 {% endif %}
